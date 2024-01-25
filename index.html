@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Task Manager</title>
+        <link rel="icon" type="image/x-icon" href="./pages.png">
+        <meta name="description" content="to-do-list_manager">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <div class="header">
+                <h2>To-Do List Manager</h2>
+                <div class="nav-panel">
+                    <a onclick="home()"><img src="./home.png" alt="Home" title="Home"/></a>
+                    <a onclick="showlist()"><img src="./list-check.png" alt="Display List" title="Display To-do List"></a>
+                    <a onclick="backhome()"><img src="./plus.png" alt="Add" title="Add List"></a>
+                    <div class="dropdown">
+                        <a id="colorBtn"><img src="./palette.png" alt="Change Color" title="Change Color"/></a>
+                        <div class="dd-content">
+                            <a href="#" onclick="changeColor('blueviolet')">Blue Violet</a>
+                            <a href="#" onclick="changeColor('green')">Green</a>
+                            <a href="#" onclick="changeColor('orange')">Orange</a>
+                        </div>   
+                    </div> 
+                </div>
+            </div>
+            <div class="container" style="display: none;">
+                <input type="text" placeholder="Task Name" id="task_name" required>
+                <input type="time" id="task_time">
+                <input type="text" id="task_desc" placeholder="Task Description" required>
+                <div class="foot">
+                    <button type="submit" id="add"><img src="./plus.png" title="Add Task"></button>
+                    <!-- <button type="submit" id="get" onclick="get()"><img src="./check.png" title="Get Task"/></button> -->
+                    <button type="reset" id="reset"><img src="./broom.png" title="Reset"/></button>
+                </div>
+            </div>
+            <div class="containerlist" style="display: none;">
+                <div id="dyta"></div>
+                <div class="foot2">    
+                    <button type="submit" id="get" onclick="get()"><img src="./check.png" title="Get Task"/></button>
+                    <button type="reset" id="reset2"><img src="./broom.png" title="Reset" /></button>
+                </div>
+            </div>
+            
+            <div class="footer">
+
+            </div>
+        </div>
+        <script src="script.js" ></script>
+    </body>
+</html>
